@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Wearepond Hockey League</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div id="header">
+
+            <div id="bar">
+                <ul>
+                    <li>
+                        <a href="home.html">
+                            <div id="siteID">
+                                <img src="images/stick.gif">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="test">
+                <ul class="test1">
+                    <li><a href="home.html">Home</a>
+                    </li>
+                    <li><a href="player_profiles.html">Profiles</a>
+                    </li>
+                    <li><a href="statistics.html">Stats</a>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a>
+                    </li>
+                    <li><a href="social.html">Social</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="body">
+
+            <div id="who">
+                 <h3>Who We Are</h3>
+
+                <p>The Weare Pond Hockey League was founded under two very important principles: competition and fun. It was founded by a small group of friends who are seeking other teams for some old fashion pond hockey. Any level of talent is welcome;
+                    our leagueincludes anywhere from absolute beginners to fairly skilled hockey players. So if you're a bender, don't feel intimidated and come play some free and easy hockey.</p>
+
+                <br/>
+                <br/>
+
+                <div id="updates">
+                     <h3>What's Happening</h3>
+
+                    <p>Currently, the Gravy Train leads the Pond Dogs 2 Boots to 1. A Boot, in WPHL terms, is a championship win. At the end of a series, the winning team get's to hoist a boot, typically L.L. Bean, which is equivolent to the Stanley Cup.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slideshow">
+            <img class="slides" src="images/league.jpg">
+            <img class="slides" src="images/boot1.jpg">
+            <img class="slides" src="images/boot2.jpg">
+            <img class="slides" src="images/boot3.jpg">
+            <button class="buttonleft" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="buttonright" onclick="plusDivs(+1)">&#10095;</button>
+
+        </div>
+
+        <script language="javascript">
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                };
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+
+        <hr/>
+
+        <div id="footer">
+            <div class="socialicon">
+                <a href="https://www.youtube.com/channel/UCJTqqUh_BOHtXu3YQst0qng">
+                    <img src="images/YouTube.png">
+                </a>
+                <a href="https://twitter.com/WearePHL">
+                    <img src="images/twitter.png">
+                </a>
+                <a href="https://www.instagram.com/weare_phl/?hl=en">
+                    <img src="images/instagram.png">
+                </a>
+            </div>
+
+            <p class="copy">Copyright &copy; 2017 <a class="copysite" href="www.wearephl.com">Weare Pond Hockey League</a>
+            </p>
+        </div>
+    </body>
+
+</html>
